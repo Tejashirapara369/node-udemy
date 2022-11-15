@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Weather</title>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+    {{>header}}
+   <p>Use this website to get your weather</p> 
+
+    <form action="post">
+      <input type="text" placeholder="location">
+      <button type="submit">Submit</button>
+      <button type="reset" id="reset">Reset</button>
+    </form>
+
+      <div id="img-section"></div>
+    <p id="para-1"></p>
+    <p id="para-2"></p>
+
+    </div>
+    {{>footer}}
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>
