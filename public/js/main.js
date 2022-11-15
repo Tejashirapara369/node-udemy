@@ -6,7 +6,7 @@ const imgSection = document.querySelector("#img-section");
 const reset = document.querySelector("#reset");
 
 const fetchWeather = (address) => {
-  fetch("http://localhost:3000/weather?address=" + address).then((resp) => {
+  fetch("/weather?address=" + address).then((resp) => {
     resp.json().then((res) => {
       if (res.error) {
         p1.textContent = "Error: " + res.error;

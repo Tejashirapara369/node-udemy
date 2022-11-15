@@ -8,6 +8,8 @@ const publicDir = path.join(__dirname, "../public");
 const viewsPath = path.join(__dirname, "../templates/views");
 const partialPath = path.join(__dirname, "../templates/partials");
 
+
+const port = process.env.PORT || 3000;
 const app = express();
 
 app.set("view engine", "hbs");
@@ -85,6 +87,6 @@ app.get("*", (req, res) => {
 //     res.send("your weather page")
 // })
 
-app.listen(3000, () => {
-  console.log("Server is up on port 3000");
+app.listen(port, () => {
+  console.log("Server is up on port " + port);
 });
